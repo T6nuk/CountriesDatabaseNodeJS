@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Countries database</title>
+</head>
+<body>
+    <h3>Data of your country</h3>
+    
+    <form action="/countries" method="POST">
+        <select name="country">
+            <option value="Estonia">Estonia</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+        </select>
+        <button type="submit">Show country data</button>
+    </form>
+    <p>Country Name: <%= nameOfCountry.countryName %></p>
+    <p>Country top level domain: <%= nameOfCountry.countryTopLevelDomain %></p>
+    <p>Country calling code: <%= nameOfCountry.countryCallingCode %></p>
+    <p>Country capital: <%= nameOfCountry.countryCapital %></p>
+    <p>Country region: <%= nameOfCountry.countryRegion %></p>
+    <p>Country subregion: <%= nameOfCountry.countrySubregion %></p>
+    <p>Country language: <%= nameOfCountry.countryLanguage %></p>
+    <p>Country's currency: <%= nameOfCountry.countryCurrencyCode %></p>
+    <p>Country's flag: <br> <img src="<%= nameOfCountry.countryFlagURL %>" alt="image of a flag"> </p>
+</body>
+</html>
